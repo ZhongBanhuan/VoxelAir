@@ -1,0 +1,119 @@
+{
+  "chainId": 10143,
+  "contract": "0xc88c591fa55f246d4a823de5d7826f8868a37e71",
+  "operatorA": "0xb61Ca3458641D3965A3Cfbbfa30F7F49060d0D50",
+  "operatorB": "0x1d61990437A895bfA4c89723564b8c577d9B557d",
+  "minute": 29920922,
+  "lockMinute": 29920914,
+  "quoteMON": "0.005",
+  "ids": {
+    "seller": "0x19b1c4d9878a36ad5850023e19cebc9cedc230a46fc5c990b41c5d5919cd3ddd",
+    "alt": "0xc71424f71fa4812c12d52ac0d38e8c5c8005075a2ba4548b4dd05694ff817e2b",
+    "direct": "0x1e86569c6fcc63cf2dfb3e39d7a8bc0dafda9794f8dbc1b3c68f8fb07ba60c78",
+    "locked": "0x896fad09be1de331ed31ca4e4edcf082fee8efc7f8236de1e1db99928d5641c3"
+  },
+  "routes": {
+    "seller": [
+      9,
+      10,
+      11
+    ],
+    "direct": [
+      6,
+      10,
+      14
+    ],
+    "alt": [
+      4,
+      8,
+      12
+    ],
+    "locked": [
+      0,
+      1
+    ]
+  },
+  "steps": {
+    "deploy": {
+      "tx": "0x66d4f99ac2b3cce6eaff7d634f63ccc74f84c0101637e980e2c196f19e9a0172",
+      "block": 81544799,
+      "status": "success",
+      "gasUsed": 1100000
+    },
+    "fund": {
+      "tx": "0x59f50b987605d886f1db86527da70f658a71326062115ad08cda1adec157d3fd",
+      "block": 81544853,
+      "status": "success",
+      "gasUsed": 21000
+    },
+    "reserve": {
+      "tx": "0xc0d9e753ba61d628eb8ceb3e6af66434d9ca7dc6b12a10181c2613ea64fb8a72",
+      "block": 81544922,
+      "status": "success",
+      "gasUsed": 300000,
+      "owners": {
+        "9": "0x19b1c4d9878a36ad5850023e19cebc9cedc230a46fc5c990b41c5d5919cd3ddd",
+        "10": "0x19b1c4d9878a36ad5850023e19cebc9cedc230a46fc5c990b41c5d5919cd3ddd",
+        "11": "0x19b1c4d9878a36ad5850023e19cebc9cedc230a46fc5c990b41c5d5919cd3ddd"
+      }
+    },
+    "conflict": {
+      "tx": "0x7f5f0bfa3e0edae3090077356320dff5967b69177fb6269bdbc7cd2ce8f49ae5",
+      "block": 81544979,
+      "status": "reverted",
+      "gasUsed": 300000,
+      "owners": {
+        "6": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "10": "0x19b1c4d9878a36ad5850023e19cebc9cedc230a46fc5c990b41c5d5919cd3ddd",
+        "14": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "reason": "Occupied(10)"
+    },
+    "reroute": {
+      "tx": "0x9409e09f0c335024d8e18304e2039409afedb901c634d7927186879981bb7865",
+      "block": 81545044,
+      "status": "success",
+      "gasUsed": 300000,
+      "owners": {
+        "4": "0xc71424f71fa4812c12d52ac0d38e8c5c8005075a2ba4548b4dd05694ff817e2b",
+        "8": "0xc71424f71fa4812c12d52ac0d38e8c5c8005075a2ba4548b4dd05694ff817e2b",
+        "12": "0xc71424f71fa4812c12d52ac0d38e8c5c8005075a2ba4548b4dd05694ff817e2b"
+      }
+    },
+    "buyout": {
+      "tx": "0xe1087b21e0358714000c2de2b5ddc9084d5103cc4a75ef17f80d4bd43e618a6a",
+      "block": 81545667,
+      "status": "success",
+      "gasUsed": 395045,
+      "owners": {
+        "4": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "6": "0x1e86569c6fcc63cf2dfb3e39d7a8bc0dafda9794f8dbc1b3c68f8fb07ba60c78",
+        "8": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "9": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "10": "0x1e86569c6fcc63cf2dfb3e39d7a8bc0dafda9794f8dbc1b3c68f8fb07ba60c78",
+        "11": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "12": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "14": "0x1e86569c6fcc63cf2dfb3e39d7a8bc0dafda9794f8dbc1b3c68f8fb07ba60c78"
+      },
+      "payoutMON": "0.005"
+    },
+    "guardReservation": {
+      "tx": "0x9f22613b2d118eaf2cf97b5e39fe2acd7defc779163e20aa98f0591539b72940",
+      "block": 81545750,
+      "status": "success",
+      "gasUsed": 221343
+    },
+    "locked": {
+      "tx": "0x003a5967a7fcf42ad53c5834adbe53cc93ba45f8821cd6f68df48b6131189647",
+      "block": 81545942,
+      "status": "reverted",
+      "gasUsed": 300000,
+      "reason": "Locked()",
+      "secondsToDeparture": 79,
+      "owners": {
+        "0": "0x896fad09be1de331ed31ca4e4edcf082fee8efc7f8236de1e1db99928d5641c3",
+        "1": "0x896fad09be1de331ed31ca4e4edcf082fee8efc7f8236de1e1db99928d5641c3"
+      }
+    }
+  }
+}

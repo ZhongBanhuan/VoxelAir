@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>VoxelAir · 航路预约台</title>
+<link rel="stylesheet" href="ui.css"><body><header><div class="brand"><i>◈</i> VoxelAir</div><span class="network"><b></b> MONAD TESTNET</span></header>
+<main><div class="intro"><div><small>低空运营沙盒</small><h1>航路预约台</h1></div><nav aria-label="模式"><button id="replay" aria-pressed="true">链上回放</button><button id="live" aria-pressed="false">钱包实操</button></nav></div>
+<section id="workbench"><article class="chart"><div class="chart-head"><div><small>SPACE / TIME</small><h2 id="mapTitle">时空占用图</h2></div><span id="layer">高度层 Z0</span></div>
+<div class="gridwrap"><div class="ylabels" aria-hidden="true"><span>Y3</span><span>Y2</span><span>Y1</span><span>Y0</span></div><div id="map" role="group" aria-label="合成网格占用"></div><div class="xaxis" aria-hidden="true"><span>X0</span><span>X1</span><span>X2</span><span>X3</span></div></div>
+<div class="legend"><span><b class="key a"></b> A 常规巡检</span><span><b class="key b"></b> B 加急配送</span><span><b class="key c"></b> 冲突格</span></div><div class="mapfoot" id="time"></div></article>
+<article class="panel" id="story"><small>交易时间线</small><h2>双运营方演示</h2><div id="timeline"></div><div class="detail"><strong id="stepTitle"></strong><p id="detail"></p><a id="tx" target="_blank" rel="noopener">查看测试网交易 ↗</a></div></article>
+<article class="panel" id="actions" hidden><small>测试网操作</small><h2>预约与让渡</h2><p class="note">准备两个持有测试 MON 的钱包账户。先用 A 预约，再切到 B。</p>
+<button id="connect">连接当前钱包</button><p id="who"></p>
+<label>起飞时段（本机时间）<input type="datetime-local" id="start"></label>
+<label>A 的让路报价（测试 MON，0 为不可买断）<input id="price" type="number" value="0.005" min="0" step="0.001"></label>
+<div class="buttons"><button data-action="reserve">A · 预约主线</button><button data-action="conflict">B · 尝试冲突线</button><button data-action="reroute">B · 预约备选线</button><button data-action="buyout">B · 按报价买断</button></div>
+<button id="refresh">读取链上占用</button><button id="reset">换一轮演示</button><p class="note">发送失败交易也会产生 gas。锁定窗口为起飞前 90 秒。</p><p id="feedback" role="status"></p><a id="liveTx" hidden target="_blank" rel="noopener">查看本次交易 ↗</a></article></section>
+<footer><span>合成网格 · 起飞前商业预约</span><a id="contract" target="_blank" rel="noopener">合约地址 ↗</a></footer></main>
+<script src="ethers.min.js"></script><script src="deployment.js"></script><script src="app.js"></script></body></html>

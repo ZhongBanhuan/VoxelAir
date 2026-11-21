@@ -1,0 +1,6 @@
+.chart-head label{color:#c2dbce;font-size:12px}.chart select{color:#fff;background:#214843;border:1px solid #73938b;padding:4px 8px;border-radius:5px}
+#map .cell{cursor:default}#map .chosen{box-shadow:inset 0 0 0 2px #fff8bf}#map .collision{box-shadow:inset 0 0 0 3px #ff9974}
+.legend{gap:8px 14px;justify-content:flex-start}.legend .key{vertical-align:middle}#timeline .row{padding:8px 6px}
+#trading select{width:100%;padding:8px;border:1px solid #aebeb5;border-radius:6px;background:#fff}#account{font:13px monospace}
+#quotes{padding-left:18px;margin:5px 0;color:#37554b}#quotes:empty{display:none}#notice{overflow-wrap:anywhere}#submit:enabled{background:#104845;color:white}
+.chart-head h2{margin-bottom:8px}#workbench{align-items:stretch}#trading button:disabled{cursor:not-allowed}

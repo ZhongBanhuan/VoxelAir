@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>VoxelAir · 多方预约台</title>
+<link rel="stylesheet" href="ui.css"><link rel="stylesheet" href="market.css"><body>
+<header><div class="brand"><i>◈</i> VoxelAir</div><span class="network"><b></b> MONAD TESTNET</span></header>
+<main><div class="intro"><div><small>低空运营沙盒</small><h1>多方航路预约台</h1></div><nav aria-label="模式"><button id="demoTab" aria-pressed="true">成交回放</button><button id="tradeTab" aria-pressed="false">钱包实操</button></nav></div>
+<section id="workbench"><article class="chart"><div class="chart-head"><div><small>沙盒占用图</small><h2 id="mapTitle">同一时段的运营商</h2></div><label>高度层 <select id="level" aria-label="高度层"><option>Z0</option><option>Z1</option><option>Z2</option><option>Z3</option></select></label></div>
+<div class="gridwrap"><div class="ylabels" aria-hidden="true"><span>Y3</span><span>Y2</span><span>Y1</span><span>Y0</span></div><div id="map" aria-label="空间格"></div><div class="xaxis" aria-hidden="true"><span>X0</span><span>X1</span><span>X2</span><span>X3</span></div></div><div id="legend" class="legend"></div><div id="slice" class="mapfoot"></div></article>
+<article class="panel" id="history"><small>测试网交易</small><h2>四家运营商，一次让渡</h2><div id="timeline"></div><div class="detail" aria-live="polite"><strong id="result"></strong><p id="reason"></p><a id="receipt" target="_blank" rel="noopener">查看交易 ↗</a></div></article>
+<article class="panel" id="trading" hidden><small>起飞前预约</small><h2>提交意向航线</h2><button id="connect">连接钱包</button> <span id="account"></span>
+<label>起飞分钟（本机时间）<input id="start" type="datetime-local"></label>
+<label>意向格号（按经过次序，用逗号分隔）<input id="route" value="6,10,14,15"></label>
+<label>直接预约时的让路报价（测试 MON，0 为不可买断）<input id="price" value="0" type="text" inputmode="decimal"></label>
+<label>随成交释放我的旧预约<select id="alt"><option value="">保留全部</option></select></label>
+<details><summary>管理所选旧预约</summary><button id="release">释放整份预约</button> <button id="markDeparted">标记已起飞</button></details><div class="buttons"><button id="preview">读取占用与报价</button><button id="submit" disabled>提交</button></div>
+<div class="detail"><strong id="intent">尚未核对报价</strong><ul id="quotes"></ul><p id="notice" role="status"></p><a id="lastTx" target="_blank" rel="noopener" hidden>查看本次交易 ↗</a></div></article></section>
+<footer><span>合成时空格 · 起飞前 90 秒锁定</span><a id="contract" target="_blank" rel="noopener">合约地址 ↗</a></footer></main>
+<script src="ethers.min.js"></script><script src="market-data.js"></script><script src="market.js"></script></body></html>
